@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import styles from './page.module.css';
+import styles from '../styles/page.module.css';
 
 const page = () => {
 
@@ -20,15 +20,14 @@ const page = () => {
   return (
     <div className={styles.main}>
       <h1>Trending Albums</h1>
-      <div>
+      <div className={styles.albums}>
         {albums.map((album)=>{
           return(
-            <div>
+            <div className={styles.info}>
                <img key = {album.url} src = {album?.image[2]["#text"]}/>
-               <h2>{album?.name}</h2>
-               <h4>{album?.artist?.name}</h4>
+               <h2 className={styles.title}>{album?.name}</h2>
+               <h4 className={styles.artist}>{album?.artist?.name}</h4>
             </div>
-           
           )
         })}
       </div>

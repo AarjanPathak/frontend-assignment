@@ -7,6 +7,7 @@ import Row from "./Row"
 
 function Home() {     
     const TopAlbumsUrl = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=disco&api_key=0dcdb5c029ca6f08b0396eb697a2c615&format=json"
+    
     const [albums, setAlbums] = useState([])
     useEffect(()=>{
       axios.get(TopAlbumsUrl)
@@ -17,7 +18,7 @@ function Home() {
 
     return (
         <div className={styles.main}>
-          <h1>Trending Albums</h1>
+          <h1 className={styles.header}>Trending Albums</h1>
           <div className={styles.albums}>
             {albums.map((album,i)=>{
               return(

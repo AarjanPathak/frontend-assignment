@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Detail from "../../components/Detail"
 
 const page = (props) => {    
 
@@ -8,8 +9,7 @@ const page = (props) => {
 
     return (
         <div>
-            <h1>Album Name: {name}</h1>
-            <h1>Artist Name: {artist}</h1>
+            <Detail name = {name} artist = {artist}></Detail>
         </div>
     )
 };

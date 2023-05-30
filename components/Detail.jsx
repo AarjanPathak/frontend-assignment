@@ -24,7 +24,7 @@ function detail({name, artist}) {
    }, [AlbumsInfoUrl])
 
    if (!album || !album.image || album.image.length === 0) {
-    return null; // Return null or handle the case when the data is not available yet
+    return null; // Return null when the data is not available yet
   }
 
     return (

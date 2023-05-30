@@ -19,9 +19,10 @@ function Home() {
         <div className={styles.main}>
           <h1>Trending Albums</h1>
           <div className={styles.albums}>
-            {albums.map((album)=>{
+            {albums.map((album,i)=>{
               return(
                 <Row
+                    key={i}
                     image = {album?.image[2]["#text"]}
                     name = {album?.name}
                     artist = {album?.artist?.name}
